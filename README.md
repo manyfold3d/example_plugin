@@ -21,3 +21,15 @@ You can add your own pages to the application - see `app/controllers/example_plu
 ## Print services
 
 You can add new print services, which are responsible for communicating with printer APIs. See `app/services/print`.
+
+## File handlers
+
+File handlers are used for many things across Manyfold; the simplest example is "open in" links for files. You can add a new file handler for a slicer with just a few lines. See `app/lib/file_handlers` for an example.
+
+## Translations and text strings
+
+Locale-specific strings can be included in `config/locales/en.yml`, and whatever other languages you have translated them into. See the Manyfold source for a list of supported languages. Use the standard Rails `t()` method to use the translation in your views, or use `translate()` to get a version with less markup for use in HTML attribute values (e.g. button labels).
+
+## Images and other static assets
+
+Not currently available, but hopefully soon.
