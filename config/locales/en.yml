@@ -1,5 +1,9 @@
 ---
 en:
+  components:
+    example_plugin:
+      nav_link:
+        label: ExamplePlugin
   model_files:
     download:
       example_slicer: Open in ExampleSlicer
