@@ -1,3 +1,22 @@
-<h1>Hello there!</h1>
+<%= PageTitle title: "Hello there!" %>
 
 <p class="lead">I'm a Manyfold plugin!</p>
+
+<p>I can do pretty much anything the main application can do. For instance:</p>
+
+<ul>
+	<li>Current user: <%= current_user.username %></li>
+	<li>Model count: <%= @models.count %></li>
+</ul>
+
+<p>I can even use UI components from the main app:</p>
+
+<h3>Random models</h3>
+
+<div class="row">
+	<%- @models.order(DatabaseDetector.is_mysql? ? "RAND()" : "RANDOM()").limit(3).each do |model| %>
+		<div class="col col-md-3">
+			<%= ModelCard model: model %>
+		</div>
+	<%- end %>
+</div>
