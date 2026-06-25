@@ -1,3 +1,3 @@
-HelloWorld::Engine.routes.draw do
-  root to: "hello_world/hello#index"
+ExamplePlugin::Engine.routes.draw do
+  root to: "example_plugin/hello#index"
 end
