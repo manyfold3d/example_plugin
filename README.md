@@ -18,6 +18,10 @@ See the [Manyfold Gemfile](https://github.com/manyfold3d/manyfold/blob/main/Gemf
 
 You can add your own pages to the application - see `app/controllers/example_plugin` for a skeleton controller, with associated views in `app/views/example_plugin`.
 
+## Components & Hooks
+
+The main application has various "hooks", locations within the app UI that will render [Phlex](https://phlex.fun) components that are registered by plugins. For an example, see `components/example_plugin/nav_link.rb`, and the hook registration in `config/initializers/register_hooks.rb`.
+
 ## Print services
 
 You can add new print services, which are responsible for communicating with printer APIs. See `app/services/print`.
