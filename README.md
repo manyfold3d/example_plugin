@@ -22,9 +22,11 @@ You can add your own pages to the application - see `app/controllers/example_plu
 
 You can add new print services, which are responsible for communicating with printer APIs. See `app/services/print`.
 
-## File handlers
+## Media types and File handlers
 
-File handlers are used for many things across Manyfold; the simplest example is "open in" links for files. You can add a new file handler for a slicer with just a few lines. See `app/lib/file_handlers` for an example.
+You can register your own media types - see `config/initializers/media_types.rb` for details. All registered media types will be indexed by Manyfold when scanning for files on disk.
+
+Relatedly, file handlers are used for many things across Manyfold; the simplest example is "open in" links for files. You can add a new file handler for a slicer with just a few lines. See `app/lib/file_handlers` for an example.
 
 ## Translations and text strings
 
