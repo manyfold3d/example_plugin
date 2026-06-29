@@ -14,6 +14,19 @@ Currently there is no way to add new Ruby dependencies from plugins. This may be
 
 See the [Manyfold Gemfile](https://github.com/manyfold3d/manyfold/blob/main/Gemfile) for direct dependencies, or the [Gemfile.lock](https://github.com/manyfold3d/manyfold/blob/main/Gemfile.lock) file for a complete list. Similarly, see [package.json](https://github.com/manyfold3d/manyfold/blob/main/package.json) and [yarn.lock](https://github.com/manyfold3d/manyfold/blob/main/yarn.lock) for preinstalled npm packages.
 
+## Metadata
+
+Plugin metadata (version, name, homepage, etc) should be specified in the `plugin_name.gemspec` file; see `example_plugin.gemspec` in this repository for an example. Currently this is just used for metadata, so only the following fields are used:
+
+* name
+* version
+* summary
+* description
+* authors
+* homepage
+
+Proper [gemspecs](https://guides.rubygems.org/specification-reference/) must include a `files` attribute; this is not necessary for Manyfold plugins. Also, note that adding dependencies won't work at the moment (see above).
+
 ## Controllers & Views
 
 You can add your own pages to the application - see `app/controllers/example_plugin` for a skeleton controller, with associated views in `app/views/example_plugin`.
