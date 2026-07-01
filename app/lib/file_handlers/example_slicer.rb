@@ -5,10 +5,10 @@ class FileHandlers::ExampleSlicer < FileHandlers::Base
 
   INPUT_TYPES = Mime::EXTENSION_LOOKUP.slice("stl").values.freeze
 
-  def self.open_url_for(target, client_os: nil)
+  def self.open_url_for(file, client_os: nil)
     URI::Generic.new(
       "exampleslicer", nil,
-      "open", nil, nil, CGI.escapeURIComponent(target), nil,
+      "open", nil, nil, CGI.escapeURIComponent(signed_url_for(file)), nil,
       nil, nil
     ).to_s
   end
