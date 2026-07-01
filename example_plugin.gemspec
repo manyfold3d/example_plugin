@@ -9,4 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary = "An example Manyfold plugin"
   spec.description = "Demonstrates plugin structure as well as how to add print APIs, external URL loaders, file handlers, UI components and more!"
   spec.license = "MIT"
+  spec.metadata = {
+    "manyfold_version" => ">= 0.146.0",
+  }
 end
